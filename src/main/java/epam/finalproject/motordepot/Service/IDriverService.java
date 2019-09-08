@@ -4,7 +4,7 @@ import epam.finalproject.motordepot.entities.Driver;
 import java.util.List;
 
 public interface IDriverService  {
-    Driver getDriverFromBDByID(int driverId);
+    Driver getDriverByID(int driverId);
     List<Driver> getAllDrivers();
     void addDriver(Driver driver);
     int deleteDriverById(int driverId);

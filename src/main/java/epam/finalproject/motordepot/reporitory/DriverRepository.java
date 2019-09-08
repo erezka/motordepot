@@ -24,7 +24,7 @@ public class DriverRepository implements IDriverRepository {
             resultSet.getLong("driving_licence_number")));
 
     @Override
-    public Driver getDriverFromBDByID(int driverId) {
+    public Driver getDriverByID(int driverId) {
         String sql = "SELECT * FROM drivers WHERE driver_id = ?";
         return jdbcTemplate.queryForObject(sql,new Object[]{driverId},DRIVER_ROW_MAPPER);
 

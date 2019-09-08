@@ -12,8 +12,8 @@ public class DriverService implements IDriverService  {
     private DriverRepository driverRepository;
 
     @Override
-    public Driver getDriverFromBDByID(int driverId){
-        return driverRepository.getDriverFromBDByID(driverId);
+    public Driver getDriverByID(int driverId){
+        return driverRepository.getDriverByID(driverId);
     }
 
     @Override
@@ -23,12 +23,8 @@ public class DriverService implements IDriverService  {
 
     @Override
     public void addDriver(Driver driver){
-        try{
-            driverRepository.addDriver(driver);
-            System.out.println("Операция выполнена успешно." + " " + "Водитель добавлен в базу.");
-        }catch (NullPointerException e){
-            System.out.println("Операция не выполнена:" + " " + e.getMessage());
-        }
+        driverRepository.addDriver(driver);
+        System.out.println("Операция выполнена успешно." + " " + "Водитель добавлен в базу.");
     }
 
     @Override
